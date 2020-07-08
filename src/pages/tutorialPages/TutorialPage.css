@@ -1,0 +1,171 @@
+.tutorialPageHeader {
+    width: 100%;
+    height: 42px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.tutorialNav {
+    width: 50%;
+    height: 30px;
+    top: 12px;
+    position: relative;
+    padding: 0;
+    margin: 0;
+}
+
+.tutorialNav li {
+    font-size: 15px;
+    list-style: none;
+    float: left;
+    height: 23px;
+    background: transparent;
+    width: 84px;
+    font-family: Calibri, serif;
+    border-radius: 6px;
+    padding-top: 3px;
+    text-align: center;
+}
+
+.tutorialNav li:hover {
+    cursor: pointer;
+}
+
+.tutorialSearch {
+    width: 30%;
+    top: 12px;
+    position: relative;
+    height: 30px;
+}
+
+.tutorialSearch input {
+    position: relative;
+    left: 20px;
+    height: 20px;
+    padding-left: 10px;
+
+}
+
+.tutorialSearch svg {
+    position: relative;
+    left: 5px;
+    top: 10px;
+    width: 20px;
+}
+
+.tutorialPosts {
+    width: 100%;
+    flex-wrap: wrap;
+    display: flex;
+    justify-content: space-between;
+}
+
+.tutorialPosts p {
+    height: 100%;
+    font-family: Calibri, serif;
+    font-size: 15px;
+    overflow-wrap: anywhere;
+    overflow: hidden;
+}
+
+.tutorialPostUser h1 {
+    background: rgba(255, 146, 64, 0.27);
+}
+
+.tutorialPageRightHandSide {
+    min-height: 100px;
+    width: 183px;
+    position: relative;
+    float: left;
+    padding: 10px 20px 10px 20px;
+    -webkit-animation: fadeinSlideUp 1.5s; /* Safari, Chrome and Opera > 12.1 */
+    -moz-animation: fadeinSlideUp 1.5s; /* Firefox < 16 */
+    -ms-animation: fadeinSlideUp 1.5s; /* Internet Explorer */
+    -o-animation: fadeinSlideUp 1.5s; /* Opera < 12.1 */
+    animation: fadeinSlideUp 1.5s;
+}
+
+.tutorialPageRightHandSide svg {
+    width: 24px;
+    height: 24px;
+}
+
+.tutorialPageActions button {
+    width: 100%;
+    height: 30px;
+    font-family: Calibri, serif;
+    font-size: 18px;
+    text-transform: none;
+}
+
+#iNeedTutorialButton {
+    background: #FF9240;
+    color: white;
+}
+
+#iCanTutorButton {
+    margin-top: 10px;
+    background: white;
+    color: #E36100;
+    border: 1px solid #E36100;
+}
+
+.tutorialPageTopicFilterHeader h1 {
+    font-family: Calibri, serif;
+    font-size: 20px;
+}
+
+.tutorialPagePostsTopicFilter ul {
+    padding-left: 0;
+}
+
+.tutorialPagePostsTopicFilter li {
+    display: flex;
+    justify-content: space-between;
+    font-size: 16px;
+    font-family: Calibri,serif;
+    list-style: none;
+    margin: 20px 0 10px 0
+}
+
+.tutorialPagePostsTopicFilter li p {
+    margin: 0;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.tutorialPagePostsTopicFilter li span {
+    height: 15px;
+    width: 15px;
+    padding: 0;
+    color: #e36100;
+}
+
+#topicFilterCheckBox {
+    height: 24px;
+    width: 24px;
+    top: -4px;
+    left: -4px;
+}
+
+.myTutorPostsNotification{
+    position: absolute;
+    left:120px;
+}
+.myTutorPostsNotification #notification {
+    height: 18px;
+    width: 18px;
+    background: #FF0000;
+    border-radius: 8px;
+    float: left;
+    font-weight: bold;
+    position: relative;
+    left:30px;
+    z-index: 20;
+    bottom: 25px;
+    text-align: center;
+    color: white;
+    font-family: Calibri, serif;
+    padding-top:2px;
+    font-size: 13px;
+}

@@ -1,0 +1,66 @@
+.backgroundContainer{
+    height: 100%;
+    width: 100%;
+}
+.orangeHalf{
+    position: relative;
+    height: 100%;
+    width: 37%;
+    background-color: #FF9240;
+    float: left;
+}
+
+.orangeHalf h1{
+    font-family: VGARound;
+    font-weight: bold;
+    position: absolute;
+    font-size: 36px;
+    color: white;
+    top: 30%;
+    left: 15%;
+
+}
+
+.orangeHalf ul{
+    list-style: none;
+    position: absolute;
+    top: 41%;
+    left: 15%;
+}
+.orangeHalf ul li::before{
+    content: "\2022";
+    color: white;
+    display: inline-block;
+    margin-left: -1em;
+    font-family: VGARound;
+    font-size: 20px;
+}
+.orangeHalf span{
+    font-family: VGARound;
+    font-size: 20px;
+    color: white;
+}
+
+.orangeHalf img{
+    position: absolute;
+    left: 40px;
+    top: 23px;
+}
+.logoContainer{
+    position: relative;
+    height: 121px;
+    width: 121px;
+    border-style: hidden;
+    background-color: white;
+    border-radius: 50%;
+    top: 40%;
+    left: 60px;
+    float: right;
+}
+.whiteHalf{
+    background-color: white;
+    float: right;
+    position: relative;
+    height: 100%;
+    width: 63%;
+}

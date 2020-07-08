@@ -1,0 +1,71 @@
+.sharePopupWrapper{
+    position: absolute;
+    width: 177px;
+    height: 75px;
+    border-radius: 8px;
+    border: 1px solid #BCBCBC;
+    top:40px;
+    z-index: 999;
+    left:90%;
+    background: white;
+}
+.sharePopupWrapper .topPart{
+    height: 30px;
+
+}
+.sharePopupWrapper .bottomPart{
+    height: 45px;
+}
+.sharePopupWrapper .topPart span{
+    margin:0;
+    float: left;
+    top:7px;
+    position: relative;
+    left:10px;
+}
+.sharePopupWrapper .topPart svg{
+    float: left;
+    margin:0;
+}
+.sharePopupWrapper .topPart .SocialMediaShareButton{
+    margin-left: 6px;
+    position: relative;
+    left:5px;
+    top:2px;
+}
+.sharePopupWrapper .bottomPart .shareUrlArea{
+    top:10px;
+    background: white;
+    height: 25px;
+    width: 66%;
+    border-radius: 6px;
+    white-space: nowrap;
+    overflow: hidden;
+    border: 1px solid #BCBCBC;
+    position:relative;
+    left:10px;
+    float: left;
+}
+.shareUrlArea p{
+    margin:0;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    font-size: 15px;
+    width: 70%;
+    height: 20px;
+}
+.shareUrlArea span{
+    position: relative;
+    width: 10%;
+    font-size: 15px;
+}
+.sharePopupWrapper .bottomPart span{
+    float: right;
+    position: relative;
+    top:10px;
+    right:10px;
+    color: #169BD5;
+}
+.sharePopupWrapper .bottomPart span:hover{
+    cursor: pointer;
+}

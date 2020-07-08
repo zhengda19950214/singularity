@@ -1,0 +1,85 @@
+.MyTutorPostsWrapper {
+    width: 100%;
+    flex-wrap: wrap;
+    display: flex;
+    justify-content: space-between;
+}
+
+.MyTutorPostCardWrapper {
+    margin-top: 10px;
+    width: 640px;
+    min-height: 270px;
+    background: white;
+    box-shadow: 0 0 3px #BCBCBC;
+    padding: 15px 20px 15px 20px
+}
+
+.tutorsApplicationWrapper {
+    display: block;
+    padding: 5px 5% 10px 5%
+}
+
+.tutorsApplicationWrapper #lineBreak {
+    width: 100%;
+    border-bottom: 1px solid #E4E4E4;
+}
+
+.tutorsApplicationWrapper h1 {
+    margin-top: 20px;
+    font-size: 18px;
+    font-family: Calibri, serif;
+    font-weight: normal;
+}
+
+.tutorsApplicationWrapper span{
+    font-family: Calibri, serif;
+    margin:0;
+}
+
+.tutorApplicationCardHeader {
+    height: 60px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.tutorApplicationCardHeader svg {
+    width: 25px;
+    height: 25px;
+    position: relative;
+    top: 12px;
+}
+
+.tutorApplicationCardHeader svg:hover {
+    cursor: pointer;
+}
+
+.tutoringApplicationCardFooter {
+    height: 40px;
+    display: flex;
+    margin-top: 10px;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.tutoringApplicationCardFooter button {
+    border-radius: 6px;
+    font-size: 15px;
+    font-family: Calibri, serif;
+    height: 30px;
+    text-transform: none;
+
+}
+
+.tutoringApplicationCardFooter #deal {
+    background: rgba(255, 146, 64, 0.2);
+    color: #FF9240;
+    width: 115px;
+
+}
+
+.tutoringApplicationCardFooter #message {
+    border: 1px solid #FF9240;
+    color: #FF9240;
+    width: 95px;
+}

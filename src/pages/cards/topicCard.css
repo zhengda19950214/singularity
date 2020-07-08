@@ -1,0 +1,203 @@
+.topicLeftDiv{
+    float: left;
+    padding: 26px 20px 20px 0;
+    width: 25%;
+    height: 100%;
+}
+
+.topicLeftDiv button{
+    font-size: 15px;
+    width: 100px;
+    height: 30px;
+    border: 1px solid #E36100;
+    border-radius: 6px;
+    margin-top:10px;
+}
+
+.topicLeftDiv button p{
+    color: #E36100;
+    margin:0;
+    position: relative;
+    font-size: 15px;
+    font-family: Calibri,serif;
+    font-weight: bold;
+}
+.topicRightDiv{
+    float: left;
+    padding: 30px 0 20px 0;
+    width: 70%;
+    height: 100%;
+}
+.topicRightDiv h1{
+    margin: 0;
+    float: left;
+    height: 50px;
+    font-size: 20px;
+    width: 300px;
+    overflow: hidden;
+    font-family: Calibri,serif;
+    font-style: italic;
+}
+.topicToolButton{
+    position: relative;
+    float: right;
+    width: 14px;
+    height: 24px;
+}
+.topicToolButton:hover{
+    cursor: pointer;
+}
+.topicDescription{
+    position: relative;
+    top:10px;
+    height: 100px;
+    width: 100%;
+}
+.topicDescription p{
+    margin: 0;
+    height: 90%;
+    overflow: hidden;
+    width: 100%;
+    font-size: 15px;
+    font-family: Calibri,serif;
+}
+.topicDescription textarea{
+    margin: 0;
+    height: 90%;
+    overflow: hidden;
+    width: 100%;
+    font-size: 15px;
+    font-family: Calibri,serif;
+}
+.topicDescription span{
+    margin: 0;
+    font-size: 15px;
+    text-align: left;
+    float: left;
+}
+.topicDescription span:hover{
+    cursor: pointer;
+}
+.topicToolWindow {
+    position: relative;
+    left:30px;
+    border:1px #BCBCBC solid;
+    bottom: 30px;
+    width: 78px;
+    min-height: 34px;
+    background: white;
+    border-radius: 6px;
+    box-shadow: 2px 2px 5px #BCBCBC;
+    z-index: 1;
+}
+.topicToolWindowSubSection{
+    height: 34px;
+    width: 100%;
+    margin:0;
+}
+.topicToolWindowSubSection p{
+    font-family: Calibri,serif;
+    font-size: 15px;
+    position: relative;
+    top: 6px;
+    left: 15px;
+    margin:0;
+}
+.topicToolWindowSubSection:hover{
+    background: rgba(188, 188, 188, 0.21);
+    cursor: pointer;
+}
+.lastUpdateInformation{
+    width: 100px;
+}
+.lastUpdateInformation p{
+    margin:0;
+    font-size: 15px;
+    font-family: Calibri,serif;
+}
+.topicCardHeader{
+    height: 20px;
+    width: 100%;
+}
+.topicCardHeader h1{
+    margin: 0;
+    height: 30px;
+}
+.topicCardHeader input{
+    float: left;
+    position: relative;
+    padding-left: 5px;
+    top:3px;
+}
+.topicCardHeader p {
+    margin:0;
+    font-size: 15px;
+    font-family: Calibri,serif;
+    float: left;
+    position: relative;
+    left: 40px;
+    top:3px;
+}
+.topicCardHeader p:hover{
+    cursor: pointer;
+}
+.aliasesHeader{
+    height: 50px;
+}
+.aliasesHeader h1{
+    margin: 0;
+    font-size: 20px;
+    font-family: Calibri,serif;
+    font-weight: normal;
+}
+.aliasesHeader p{
+    margin: 10px 0 0 0 ;
+    font-family: Calibri,serif;
+    font-size: 15px;
+}
+.topicThumbnailCover{
+    height: 100px;
+    width: 100px;
+    border-radius: 6px;
+    border: 1px #797979 dashed;
+    z-index: 1;
+    position: absolute;
+}
+
+.topicThumbnail{
+    position: relative;
+    width: 100px;
+    height: 100px;
+    float: left;
+    border-radius: 6px;
+}
+
+.topicThumbnail img{
+    height: 100px;
+    width: 100px;
+    border-radius: 6px;
+    border: 1px #797979 dashed;
+}
+.topicThumbnail:hover{
+    cursor: pointer;
+}
+
+.topicThumbnailCover svg{
+    height: 40px;
+    width: 40px;
+    color: #6b6b6b;
+    position: absolute;
+    left: 30px;
+    top: 30px;
+}
+.topicThumbnailCover:hover{
+
+    background: rgba(107, 107, 107, 0.44);
+}
+.registerUploadThumbnailWrapper{
+    position: fixed;
+    width: 600px;
+    height: 300px;
+    left: 30%;
+    z-index: 100;
+}

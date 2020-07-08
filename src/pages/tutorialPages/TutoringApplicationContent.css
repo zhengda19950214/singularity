@@ -1,0 +1,182 @@
+.tutoringApplicationWrapper {
+    min-height: 30px;
+    display: block;
+    padding: 5px 5% 5px 5%
+}
+
+.tutoringApplicationHeader {
+    min-height: 30px;
+}
+
+.tutoringApplicationBottomPart #lineBreak {
+    width: 100%;
+    border-bottom: 1px solid #E4E4E4;
+}
+
+.tutoringApplicationBottomPart {
+    min-height: 0;
+}
+
+.tutoringApplicationBottomPart h2 {
+    font-size: 18px;
+    font-family: Calibri, serif;
+    font-weight: normal;
+}
+
+.tutoringApplicationHeader p {
+    margin-top: 10px;
+    margin-bottom: 18px;
+    font-family: Calibri, serif;
+    font-size: 15px;
+    font-weight: normal;
+    overflow: hidden;
+    overflow-wrap: anywhere;
+}
+
+.tutoringApplicationHeader h1 {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    font-family: Calibri, serif;
+    font-size: 24px;
+    font-weight: normal;
+    width: 80%;
+}
+
+.tutorialTitle {
+    display: flex;
+    justify-content: space-between;
+}
+
+.tutoringApplicationHeader h2 {
+    font-size: 18px;
+    color: black;
+    font-weight: normal;
+}
+
+.showTutoringPostDetail {
+    width: 14%;
+    height: 25px;
+    position: relative;
+
+}
+
+.showTutoringPostDetail span {
+    font-size: 15px;
+    font-family: Calibri, serif;
+    color: #6B6B6B;
+}
+
+.showTutoringPostDetail svg {
+    width: 25px;
+    height: 25px;
+    position: relative;
+    top: 6px;
+    left: 2px;
+}
+
+.showTutoringPostDetail svg:hover {
+    cursor: pointer;
+}
+
+.tutoringDetailItem {
+    display: flex;
+    min-height: 20px;
+    width: 100%;
+    justify-content: space-between;
+    margin-bottom: 10px;
+}
+
+.tutoringDetailItem #rating {
+    margin-right: 10px;
+}
+
+.TutorCardSettingExpanded .Dropdown-root {
+    height: 30px;
+    font-size: 13px;
+    width: 50%;
+    font-family: Calibri, serif;
+    margin-bottom: 10px;
+
+}
+
+.tutoringDetailItem #majorYearPicker {
+    width: 100px;
+}
+
+.tutoringDetailItem h3 {
+    font-size: 15px;
+    font-weight: normal;
+    color: #797979;
+    font-family: Calibri, serif;
+    margin: 0;
+}
+
+.tutoringDetailItem p {
+    word-wrap: anywhere;
+    text-align: right;
+    margin: 0;
+    font-family: Calibri, serif;
+    font-size: 15px;
+    width: 50%;
+}
+
+.tutoringApplicationWrapper button {
+    width: 281px;
+    display: block;
+}
+
+.tutorPostConfirmationPopUpWindow {
+    width: 341px;
+    padding: 20px 20px 10px 20px;
+    height: 125px;
+    background: white;
+    border: 1px solid #BCBCBC;
+    position: fixed;
+    top: 350px;
+    display: block;
+    margin: auto;
+    left: 35%;
+    z-index: 100;
+}
+
+.tutorPostConfirmationPopUpWindow h3 {
+    margin: 0;
+    font-family: Calibri, serif;
+    font-size: 18px;
+}
+
+.tutorPostConfirmationPopUpWindow p {
+    font-size: 15px;
+    font-family: Calibri, serif;
+}
+
+.dealPopupWindowActions {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.dealPopupWindowActions span {
+    margin: 0;
+}
+
+.dealPopupWindowActions button {
+    height: 30px;
+    font-family: Calibri, serif;
+    font-size: 15px;
+    width: 90px;
+    text-transform: none;
+    display: inherit;
+}
+
+#popUpPrimaryButton {
+    width: 90px;
+    color: #e36100;
+    font-weight: bold;
+    background: rgba(255, 146, 64, 0.2);
+}
+
+#popUpSecondaryButton {
+    margin-right: 10px;
+    border: 1px solid #FF9240;
+    color: #FF9240;
+}

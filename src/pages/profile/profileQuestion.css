@@ -1,0 +1,14 @@
+.profileQuestion{
+    width: 525px;
+    padding:16px 51px 23px 51px;
+    background: white;
+    box-shadow: 0 0 3px #BCBCBC;
+    margin-top:10px;
+    position: relative;
+    -webkit-animation: fadeinSlideUp 1.5s; /* Safari, Chrome and Opera > 12.1 */
+    -moz-animation: fadeinSlideUp 1.5s; /* Firefox < 16 */
+    -ms-animation: fadeinSlideUp 1.5s; /* Internet Explorer */
+    -o-animation: fadeinSlideUp 1.5s; /* Opera < 12.1 */
+    animation: fadeinSlideUp 1.5s;
+
+}

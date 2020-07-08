@@ -1,0 +1,16 @@
+.AddArticleWrapper{
+    position: fixed;
+    width: 100%;
+    height: 92%;
+    margin:0;
+    align-content: center;
+    overflow: auto;
+}
+.addArticleFormWrapper{
+    position: relative;
+    width: 875px;
+    min-height: 700px;
+    z-index: 2;
+    margin:auto;
+    top: 10px;
+}

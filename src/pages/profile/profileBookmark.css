@@ -1,0 +1,32 @@
+.profileRightPartWrapper{
+    height: 100%;
+    width: 96.5%;
+    padding:17px 11px 11px 11px;
+}
+.profileContentSearch{
+    width: 100%;
+    height: 40px;
+    -webkit-animation: fadein 1.0s; /* Safari, Chrome and Opera > 12.1 */
+    -moz-animation: fadein 1.0s; /* Firefox < 16 */
+    -ms-animation: fadein 1.0s; /* Internet Explorer */
+    -o-animation: fadein 1.0s; /* Opera < 12.1 */
+    animation: fadein 1.0s;
+}
+.profileContentSearch svg{
+    color: #333333;
+    position: relative;
+    left: 434px;
+    width: 16px;
+    height: 16px;
+    top:5px;
+}
+.profileContentSearch input{
+    position: relative;
+    left: 444px;
+    width: 140px;
+    height: 15px;
+}
+.profileRightPartContent{
+    height: 100%;
+    width: 100%;
+}

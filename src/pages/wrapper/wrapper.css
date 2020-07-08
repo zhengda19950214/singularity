@@ -1,0 +1,368 @@
+
+@font-face {
+    font-family: 'VGARound';
+    font-style: normal;
+    font-weight: normal;
+    src: url(../../resource/font/VAGRoundedNext-HeavyIt.OTF)
+}
+.wrapper{
+    background: #F8F8F8;
+    height: 100vh;
+}
+.contentWrapper{
+    position: relative;
+    top: 50px;
+    width: 100%;
+    height: 92%;
+    margin:0;
+    z-index: 1;
+}
+.navBar{
+    background: white;
+    height: 50px;
+    width: 100%;
+    display: block;
+    z-index: 10;
+    box-shadow: 0 2px 3px 0 rgba(52, 52, 52, 0.27);
+    margin:0;
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    position: fixed;
+}
+.logoArea{
+    width: 150px;
+    left: 22px;
+    position: relative;
+}
+.logo{
+    width: 100px;
+    font-size: 25px;
+    margin:0 0 0 0;
+    top:7px;
+    font-family: VGARound, serif;
+    position:relative;
+    float: left;
+    color: #E36100;
+    left: 12px;
+
+}
+.logoIcon{
+    width: 20px;
+    float: left;
+    height: 35px;
+    position: relative;
+    top: 7px;
+    margin: 0 0 0 0;
+}
+.navCenter{
+    width: 875px;
+    margin: auto;
+    height: 100%;
+
+}
+.tags{
+    height: 100%;
+    position:relative;
+    float:left;
+    width: 420px;
+}
+.tags li a {
+    display:block;
+    height: 20px;
+    text-decoration: none;
+    color: black;
+    font-size: 18px;
+    font-family: Calibri, serif;
+    font-weight: lighter;
+}
+.tags li{
+    height: 50%;
+    padding-right: 24px;
+    margin:13px 0 5px 0;
+    float: left;
+    list-style-type:none;
+    text-decoration:none;
+    color: black;
+    font-size: 18px;
+    font-family: Calibri, serif;
+    font-weight: lighter;
+
+
+}
+.tags li a{
+    height:34px;
+}
+.tags .unActiveLink:after {
+    margin-bottom: 15px;
+    content: '';
+    display: inline-block;
+    width: 100%;
+    border-bottom: 3px solid #e36100;
+    -webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
+    transition: opacity 0.35s, transform 0.35s;
+    -webkit-transform: scale(0,1);
+    transform: scale(0,1);
+}
+.tags .unActiveLink:hover:after {
+    opacity: 1;
+    -webkit-transform: scale(1);
+    transform: scale(1);
+}
+.tags ol{
+    margin:0;
+    text-align: left;
+    padding: 0 0 0 0;
+    width: 100%;
+    height: 100%;
+}
+.tags .activeLink a{
+    border-bottom: 3px solid #e36100;
+    font-weight: normal;
+}
+.inputArea{
+    float: left;
+    width: 250px;
+    position: relative;
+    top: 17px;
+    left: 5px;
+}
+.inputArea input{
+    float: left;
+    position: relative;
+    left:0;
+    bottom: 5px;
+    height: 22px;
+    width: 230px;
+}
+.inputArea a{
+    color: black;
+    position: relative;
+    float: left;
+    width: 2px;
+}
+
+.inputArea svg{
+    position: relative;
+    right:25px;
+    bottom:3px;
+}
+
+nav{
+    position: relative;
+    height: 100%;
+    width: auto;
+    display: flex;
+    flex-wrap: nowrap;
+}
+.askQuestionWrapper{
+    width: 183px;
+    height: 100%;
+    position: relative;
+    float: right;
+    display: flex;
+    justify-content: center;
+}
+
+.askQuestionWrapper button{
+    float: left;
+    border: 1px solid #FF9240;
+    position: relative;
+    height: 30px;
+    border-radius: 6px;
+    top: 12px;
+    padding: 1px 0 0 0;
+}
+
+
+.askQuestionWrapper #askQuestionButton{
+    width: 94px;
+    height: 28px;
+}
+
+.askQuestionWrapper #postArticleButton{
+    width: 80px;
+    margin-left: 10px;
+    height: 28px;
+}
+
+.askQuestionWrapper span{
+    color: #FF9240;
+    text-decoration: none;
+    text-transform: capitalize;
+    font-family: Calibri, serif;
+    font-size: 15px;
+}
+.askQuestionWrapper a{
+    text-decoration: none;
+}
+.accountArea{
+    right: 22px;
+    position: relative;
+    width: 150px;
+}
+.accountIcon{
+
+    float: right;
+    position: relative;
+    top:10px;
+}
+.accountIcon:hover{
+    cursor: pointer;
+}
+.accountIcon svg{
+    width: 30px;
+    height: 30px;
+    color: #FF9240;
+}
+.accountIcon img{
+    width: 30px;
+    height: 30px;
+    border: 1px solid #BCBCBC;
+    border-radius: 50px;
+}
+.wrapperToolWindow{
+    position: absolute;
+    border:1px #BCBCBC solid;
+    top:50px;
+    right: 10px;
+    width: 139px;
+    z-index: 999;
+    background: white;
+    border-radius: 6px;
+    box-shadow: 2px 2px 5px #BCBCBC;
+    text-align: left;
+}
+.wrapperToolWindowSubSection{
+    height: 50px;
+    width: 100%;
+}
+.wrapperToolWindow a{
+    text-decoration: none;
+    color: black;
+}
+.wrapperToolWindowSubSection span{
+    font-family: Calibri, serif;
+    font-size: 15px;
+    position: relative;
+    top: 13px;
+    left: 15px;
+    margin:0;
+}
+.wrapperToolWindowSubSection:hover{
+    background: rgba(188, 188, 188, 0.21);
+    cursor: pointer;
+}
+.askQuestionPage{
+    position: absolute;
+    top: 80px;
+    width: 750px;
+    min-height: 700px;
+    z-index:100;
+    left: 25%;
+    -webkit-animation: fadein 1.5s; /* Safari, Chrome and Opera > 12.1 */
+    -moz-animation: fadein 1.5s; /* Firefox < 16 */
+    -ms-animation: fadein 1.5s; /* Internet Explorer */
+    -o-animation: fadein 1.5s; /* Opera < 12.1 */
+    animation: fadein 1.5s;
+}
+.greyOutCoverBackground{
+    width: 100%;
+    position: fixed;
+    z-index: 30;
+    background-color: rgba(62, 62, 62, 0.5);
+    height: 100vh;
+    top:0;
+    left: 0;
+    opacity:0.5;
+    filter: alpha(opacity=50);
+}
+.is-active{
+    color: #09d3ac;
+}
+.messageWrapper{
+    width: 100%;
+    height: 40px;
+    position: fixed;
+    bottom: 0;
+}
+
+@keyframes fadeinSlideUp {
+    from {
+        top:300px;
+        opacity:0;
+    }
+    to {
+        top:0;
+        opacity:1;
+    }
+}
+@-moz-keyframes fadeinSlideUp {
+    /* Firefox */
+    from {
+        top:300px;
+        opacity:0;
+    }
+    to {
+        top:0;
+        opacity:1;
+    }
+}
+@-webkit-keyframes fadeinSlideUp {
+    /* Safari and Chrome */
+    from {
+        top:300px;
+        opacity:0;
+    }
+    to {
+        top:0;
+        opacity:1;
+    }
+}
+@-o-keyframes fadeinSlideUp {
+    /* Opera */
+    from {
+        top:300px;
+        opacity:0;
+    }
+    to {
+        top:0;
+        opacity:1;
+    }
+}
+
+@keyframes fadein {
+    from {
+        opacity:0;
+    }
+    to {
+        opacity:1;
+    }
+}
+@-moz-keyframes fadein {
+    /* Firefox */
+    from {
+        opacity:0;
+    }
+    to {
+        opacity:1;
+    }
+}
+@-webkit-keyframes fadein {
+    /* Safari and Chrome */
+    from {
+        opacity:0;
+    }
+    to {
+        opacity:1;
+    }
+}
+@-o-keyframes fadein {
+    /* Opera */
+    from {
+        opacity:0;
+    }
+    to {
+        opacity: 1;
+    }
+}

@@ -1,0 +1,204 @@
+
+.askQuestionForm{
+    width: 100%;
+    min-height: 800px;
+    background: white;
+    opacity: 1;
+
+}
+.askQuestionForm h1{
+    color: #E36100;
+    font-size:25px;
+    font-family: VGARound;
+    font-style: normal;
+    margin: 0;
+    padding: 0;
+    position: absolute;
+    left: 10%;
+    float: left;
+    top:20px;
+}
+.askQuestionFormClose{
+    height:50px;
+    float: right;
+    right:30px;
+    position: relative;
+    top:20px;
+}
+.askQuestionFormHeader{
+    height:50px;
+}
+
+.askQuestionInputArea{
+    width: 80%;
+    min-height: 300px;
+    position: relative;
+    left: 10%;
+    margin-bottom: 0;
+    top:10px;
+}
+.questionTitleInput{
+    padding-top: 20px;
+    height:45px;
+}
+.questionTitleInput #titleInput{
+    padding-left: 1%;
+    width: 74%;
+    height: 30px;
+    float: left;
+    border: 1px solid #797979;
+}
+
+.questionTitleInput #anonymouslyCheck{
+    width: 15px;
+    position: relative;
+    top: 5px;
+    left: 5%;
+    height: 15px;
+    float: left;
+}
+
+.questionTitleInput p{
+    margin: 0;
+    position: relative;
+    top: 5px;
+    left: 5%;
+    float: left;
+    font-size: 0.8em;
+    font-family: Calibri, Candara, Segoe, Segoe UI, Optima, Arial, sans-serif;
+}
+.questionDescriptionInputArea{
+    height:260px;
+    padding: 5px 0 10px 0 ;
+}
+
+.questionDescriptionAdvice{
+    width: 100%;
+    min-height: 70px;
+
+}
+.questionDescriptionAdvice ul{
+    margin-top:0;
+    padding-left: 3%;
+    font-size: 0.9em;
+}
+.topicInputArea{
+    height: 150px;
+    padding-top: 10px;
+}
+.topicInputWrapper{
+    height: 20px;
+}
+
+
+.topicInputArea #topicInputArea{
+    position: relative;
+    width: 200px;
+    padding-left: 10px;
+    height: 25px;
+    border: 1px solid #797979;
+}
+.topicInputArea p{
+    color: rgba(255, 0, 5, 0.76);
+    margin-left: 10px;
+    font-size: 0.8em;
+}
+.topicInputArea button{
+    background: rgba(255, 146, 64, 0.4);
+    margin-left: 10px;
+}
+.topicsPresentArea{
+    position: relative;
+    height: 100px;
+    margin-top:20px;
+    width:100%;
+    overflow: auto;
+    border: 1px solid rgba(0, 0, 0, 0.52);
+}
+.enteredTopic{
+    height: 20px;
+    position: relative;
+    float: left;
+    border-radius: 10px;
+    border:1px solid transparent;
+    text-align: center;
+    padding:0 5px 0 12px;
+    font-size: 13px;
+    margin:7px 10px 7px 10px;
+    background-color: #e4e4e4;
+    color: #6b6b6b;
+}
+.enteredTopicClose{
+    width: 10px;
+    position: relative;
+    float: right;
+    border: 3px solid transparent;
+}
+.topicAdvice{
+    padding-top: 10px;
+    width: 100%;
+    height: 70px;
+}
+.topicAdvice ul{
+    margin-top:0;
+    padding-left: 3%;
+    font-size: 0.9em;
+}
+.footer {
+    min-height: 50px;
+    position: relative;
+    padding-bottom: 10px;
+}
+.footer svg{
+    float: left;
+    width: 15px;
+    height: 15px;
+    position: relative;
+    left:5px;
+    top:5px;
+    color: #6B6B6B;
+}
+.footer input{
+    margin:0;
+    position: relative;
+    padding: 0;
+    top:5px;
+    float: left;
+}
+.footer p{
+    margin:0 0 0 10px;
+    padding: 0;
+    float: left;
+}
+.askButton{
+    float: right;
+    width: 81px;
+    position: relative;
+    height: 30px;
+    border-radius: 6px;
+    text-align: center;
+}
+.askButton button{
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 146, 64, 0.27);
+
+}
+.askButton span{
+    position: relative;
+    color: #E36100;
+    font-family: Calibri, serif;
+    font-weight: bold;
+    text-transform: capitalize;
+    font-size: 15px;
+    text-decoration: none;
+
+}
+.topicSearchDropdown{
+    min-height: 30px;
+    background: white;
+    position: relative;
+    border: 1px solid #797979;
+    z-index: 9999;
+    border-radius: 3px;
+}

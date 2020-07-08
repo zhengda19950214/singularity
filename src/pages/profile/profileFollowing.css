@@ -1,0 +1,80 @@
+.followingContent{
+    width: 291px;
+    height: 86px;
+    box-shadow: 0 0 3px #BCBCBC;
+    background: white;
+    float: left;
+    margin-left: 10px;
+    margin-top: 10px;
+    -webkit-animation: fadein 1.0s; /* Safari, Chrome and Opera > 12.1 */
+    -moz-animation: fadein 1.0s; /* Firefox < 16 */
+    -ms-animation: fadein 1.0s; /* Internet Explorer */
+    -o-animation: fadein 1.0s; /* Opera < 12.1 */
+    animation: fadein 1.0s;
+}
+.followingContent img{
+    position:relative;
+    left: 11px;
+    top: 12px;
+    width: 60px;
+    height: 60px;
+    border-radius: 6px;
+    border: 1px rgba(121, 121, 121, 0.38) solid;
+    float:left;
+    overflow: hidden;
+}
+.followingContent h1{
+    overflow: hidden;
+    margin: 0;
+}
+.followingPeopleIntro{
+    width: 160px;
+    top: 12px;
+    float:left;
+    height: 60px;
+    margin-left:26px;
+    position: relative;
+}
+.followingPeopleIntro a{
+    text-decoration: none;
+    color:black;
+}
+.followingPeopleIntro h1{
+    font-family: Calibri, serif;
+    font-size: 16px;
+    margin:0;
+}
+.followingPeopleIntro p{
+    font-family: Calibri, serif;
+    font-size: 16px;
+    margin: 0;
+    color: #999999;
+}
+.followingContent svg{
+    position: relative;
+    float: left;
+    left:5px;
+    top:30px;
+    color: #333333;
+}
+.followingContent svg:hover{
+    cursor: pointer;
+}
+.followingTopicName{
+    width: 140px;
+    top: 12px;
+    float:left;
+    height: 60px;
+    margin-left:26px;
+    position: relative;
+}
+.followingTopicName h1{
+    font-family: Calibri, serif;
+    font-size: 16px;
+    height: 20px;
+    margin:20px 0 0 0;
+}
+.followingTopicName a{
+    text-decoration: none;
+    color:black;
+}

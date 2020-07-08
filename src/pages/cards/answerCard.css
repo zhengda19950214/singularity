@@ -1,0 +1,205 @@
+
+.answerUserInformation{
+    position:relative;
+    margin-top:10px;
+    height: 40px
+}
+.cardToolWrapper{
+    float: right;
+    height: 100%;
+    position: relative;
+}
+.cardToolWrapper svg{
+
+}
+.cardToolWindow{
+    position: absolute;
+    left:30px;
+    border:1px #BCBCBC solid;
+    top:0;
+    width: 78px;
+    min-height: 30px;
+    background: white;
+    border-radius: 6px;
+    box-shadow: 2px 2px 5px #BCBCBC;
+    z-index: 10;
+    text-align: left;
+}
+.cardToolIcon:hover{
+    cursor: pointer;
+}
+.answerUserInformation img{
+    position: relative;
+    float: left;
+    width: 30px;
+    height: 30px;
+    border-radius: 20px;
+    border: 1px rgba(121, 121, 121, 0.38) solid;
+}
+.answerUserInformation img:hover{
+    cursor: pointer;
+}
+.answerUserDetail span{
+    float: left;
+    position: relative;
+    top: 0;
+    font-weight: bold;
+    font-size: 16px;
+    font-family: Calibri, serif;
+}
+.answerUserDetail{
+    margin-left: 2%;
+    position: relative;
+    float: left;
+    font-size:13px;
+    width: 50%;
+}
+.answerUserDetail a{
+    color: black;
+}
+
+.answerUserDetail h2{
+    position: relative;
+    margin: 4px 0 0 0;
+    left: 20px;
+    float: left;
+    color: #6B6B6B;
+    font-size: 14px;
+    font-weight: normal;
+    font-family: Calibri, serif;
+}
+.answerUserDetail h3{
+    position: relative;
+    float: left;
+    font-weight: normal;
+    margin: 0 0 0 0;
+    color: #999999;
+    font-size: 15px;
+    width: 100%;
+
+}
+.answerContents{
+    min-height: 50px;
+    overflow: hidden;
+    width: 100%;
+    position: relative;
+    word-wrap: break-word;
+    margin-bottom: 20px;
+
+}
+.answerContents pre{
+    background: rgba(69, 67, 62, 0.29);
+    min-height: 20px;
+    padding-left:10px;
+    border-radius:3px ;
+    font-family: Calibri;
+    font-size: 15px;
+    margin:0;
+}
+.answerContents a{
+    color: #169BD5;
+    font-size: 15px;
+    font-family: Calibri, serif;
+}
+.answerContents span{
+    margin: 0;
+}
+.answerContents p{
+    color: black;
+    font-family: Calibri, serif;
+    margin:0;
+    font-size: 15px;
+}
+.answerContents h3{
+    margin: 0;
+    color: #3f56ff;
+    width: 70px;
+    font-size: 20px;
+}
+.answerContents blockquote{
+    border-left: 4px solid #ccc;
+    margin: 5px 0 5px 0;
+    padding-left: 16px;
+
+}
+.answerContents h3:hover{
+    cursor: pointer;
+
+}
+.commentUserInformation{
+
+    position:relative;
+    top:5px;
+    height: 50px
+}
+
+.commentsForAnswer{
+    position: relative;
+    left: 4%;
+    margin: 0 0 0 0;
+    background: white;
+    width: 96%;
+    min-height: 100px;
+}
+.comment{
+    width: 100%;
+    min-height: 100px;
+    margin-top:20px;
+}
+.commentContent{
+    min-height: 50px;
+    padding: 0 0 0 0;
+    word-wrap: break-word;
+    overflow: hidden;
+}
+.commentContent p {
+    font-size: 15px;
+    font-family: Calibri;
+    margin:0;
+}
+.quill {
+    height: 70%;
+}
+.answerActions{
+    width: 100%;
+    position: relative;
+    height: 30px;
+}
+.answerActions svg{
+    height: 20px;
+    margin-left: 10px;
+    margin-top:5px;
+    margin-bottom: 5px;
+    float: left;
+}
+.answerActions svg:hover{
+    cursor: pointer;
+}
+.rightAnswerActions{
+    float: right;
+    width: 118px;
+    height: 100%;
+}
+.rightCommentActions{
+    float: right;
+    width: 140px;
+    height: 100%;
+}
+.rightCommentActions svg{
+    float: right;
+    position: relative;
+}
+.commentsIconWrapper{
+    height: 50px;
+    width: 50px;
+    float: left;
+}
+.commentsIconWrapper span{
+    margin-left: 5px;
+    position: relative;
+    top:5px;
+    color: black;
+}
+.commentsIconWrapper a{
+    color: black;
+}

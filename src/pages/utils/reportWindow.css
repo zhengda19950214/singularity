@@ -1,0 +1,96 @@
+.reportWindow{
+    position: fixed;
+    z-index: 999;
+    width: 400px;
+    height: 526px;
+    border: 1px solid #BCBCBC;
+    padding: 20px 50px 40px 50px;
+    background: white;
+    left:30%;
+    top:144px;
+}
+.reportHeader{
+    height: 50px;
+    text-align: center;
+}
+.reportHeader h1{
+    margin-top: 5px;
+    font-size: 20px;
+    font-family: Calibri, serif;
+    font-weight: normal;
+    position: relative;
+}
+.reportOptions{
+    width: 100%;
+    text-align: left;
+    height: 300px;
+
+}
+.reportOption{
+    background: white;
+    height: 50px;
+    width: 100%;
+    margin-top:10px;
+    border: 1px solid #BCBCBC;
+}
+.reportOption:hover{
+    background: rgba(188, 188, 188, 0.39);
+    cursor: pointer;
+}
+.reportOption span{
+    font-size: 18px;
+    font-family: Calibri, serif;
+    position: relative;
+    left: 60px;
+    top:15px;
+}
+.reportOption input{
+    position: relative;
+    left:40px;
+    top:15px;
+    background: white;
+}
+.reportInformation{
+    margin-top:30px;
+    height: 100px;
+}
+.reportInformation textarea{
+    height: 80px;
+    resize : none;
+    width: 380px;
+    padding:10px 10px 10px 10px
+}
+.reportActions{
+    margin-top:20px;
+    height: 100px;
+}
+.reportActions button{
+    border-radius: 6px;
+    font-size: 15px;
+    font-family: Calibri, serif;
+}
+.reportActions #cancel{
+    position: relative;
+    font-family: Calibri, serif;
+    font-weight: bold;
+    text-transform: capitalize;
+    font-size: 15px;
+    text-decoration: none;
+    border: 1px solid #FF9240;
+    float: left;
+    color: #FF9240;
+}
+.reportActions #report{
+    position: relative;
+    color: #E36100;
+    font-family: Calibri, serif;
+    font-weight: bold;
+    text-transform: capitalize;
+    font-size: 15px;
+    text-decoration: none;
+    float: right;
+    background: rgba(255, 146, 64, 0.2);
+}
+.reportActions span{
+    position: relative;
+}

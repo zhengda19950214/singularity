@@ -1,0 +1,84 @@
+.searchPageWrapper{
+    position: relative;
+    width: 100%;
+    margin:0;
+    height: 92vh;
+    align-content: center;
+    overflow: auto;
+
+}
+.searchResultAndFilter{
+    float: left;
+    width: 680px;
+}
+.searchPageContent{
+    margin:auto;
+    width: 875px;
+    position: relative;
+}
+.filterWrapper{
+    top:10px;
+    box-shadow: 0 0 3px #BCBCBC;
+    padding:10px 50px 10px 50px;
+    min-height: 60px;
+    background: white;
+    position: relative;
+    -webkit-animation: fadein 1s; /* Safari, Chrome and Opera > 12.1 */
+    -moz-animation: fadein 1s; /* Firefox < 16 */
+    -ms-animation: fadein 1s; /* Internet Explorer */
+    -o-animation: fadein 1s; /* Opera < 12.1 */
+    animation: fadein 1s;
+}
+.searchResultWrapper{
+    width: 680px;
+    min-height: 500px;
+    position: relative;
+}
+.topicFilters{
+    min-height: 32px;
+    position: relative;
+    overflow: hidden;
+}
+.topicFilter{
+    height: 20px;
+    position: relative;
+    float: left;
+    border-radius: 8px;
+    box-shadow: 0 0 0 1px lightgrey;
+    text-align: center;
+    padding:5px 12px 5px 12px;
+    font-size: 13px;
+    margin:2px 10px 10px 2px;
+}
+#selectedTopic {
+    background: rgba(255, 146, 64, 0.27);
+}
+.topicFilter:hover{
+    box-shadow: 0 0 0 1px gray;
+    cursor: pointer;
+}
+.topicFilter span{
+    position: relative;
+}
+.topicFilterHeader{
+    height: 35px;
+}
+
+.topicFilterHeader h1{
+    margin:1px 0 0 0;
+    font-size: 15px;
+    font-family: Calibri, serif;
+    font-weight: normal;
+    float: left;
+}
+.addNewTopicArea{
+    float:right;
+    height: 30px;
+}
+.addNewTopicArea input{
+    width: 114px;
+    padding-left: 8px;
+}
+.topicFilterSearchDropdown{
+    width: 114px;
+}

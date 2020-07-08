@@ -1,0 +1,98 @@
+.topicsWrapper{
+    height: 100%;
+    width: 100%;
+    position: relative;
+}
+.topicNameAndThumbnail{
+    float: left;
+    position: relative;
+    width: 100%;
+}
+.topicsWrapper svg{
+    width: 16px;
+    height: 16px;
+    position: relative;
+    right:20px;
+    top:8px;
+    float: right;
+}
+.topicsWrapper a{
+    cursor: pointer;
+}
+.topicsWrapper a :hover{
+    text-decoration: underline;
+}
+.topics{
+    margin-top:10px;
+    padding-left: 20px;
+    min-height: 100px;
+    width:195px;
+    position: relative;
+    padding-bottom: 20px;
+    float: left;
+    -webkit-animation: fadeinSlideUp 1.5s; /* Safari, Chrome and Opera > 12.1 */
+    -moz-animation: fadeinSlideUp 1.5s; /* Firefox < 16 */
+    -ms-animation: fadeinSlideUp 1.5s; /* Internet Explorer */
+    -o-animation: fadeinSlideUp 1.5s; /* Opera < 12.1 */
+    animation: fadeinSlideUp 1.5s;
+}
+.topicHeader{
+    height: 25px;
+    padding-top:5px;
+}
+.topicHeader p{
+    padding: 0;
+    margin: 0;
+    font-size: 1.3em;
+    font-weight: bold;
+    font-family:Calibri,Candara,Segoe,Segoe UI,Optima,Arial,sans-serif;
+}
+.topicsWrapper li{
+    padding: 10px 10px 0 10px;
+    list-style-type:none;
+    height: 32px;
+    text-decoration:none;
+    overflow: hidden;
+}
+.topicsWrapper input{
+    padding-left: 10px;
+    width: 131px;
+    height: 25px;
+    position: relative;
+    left:30px;
+}
+.topicsWrapper img{
+    position: relative;
+    left: 15%;
+    width: 28px;
+    height: 28px;
+
+    border: 1px #797979 dashed;
+}
+.topicsWrapper span{
+    position: relative;
+    left: 18%;
+    bottom:10px;
+    font-family: Calibri;
+    font-size: 16px;
+}
+.topicsWrapper a{
+    text-decoration: none;
+    color:black;
+}
+.topicsWrapper span:hover{
+    cursor: pointer;
+}
+.topicWrapperSearchDropdown{
+    min-height: 30px;
+    width: 143px;
+    background: white;
+    position: relative;
+    left:40px;
+    border: 1px solid #797979;
+    z-index: 9999;
+    border-radius: 3px;
+}
+.topicWrapperEnterTopic{
+    height: 50px;
+}

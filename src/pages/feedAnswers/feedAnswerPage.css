@@ -1,0 +1,39 @@
+.homePage{
+    position: fixed;
+    top: 50px;
+    width: 100%;
+    height: 92%;
+    margin:0;
+    align-content: center;
+    overflow: auto;
+}
+.homePageContent{
+    width: 950px;
+    height: 100%;
+    position: relative;
+    left:30px;
+    z-index: 1;
+    margin: auto;
+}
+.feedAnswers {
+    position: relative;
+    left: 0;
+    width: 680px;
+    height: 80%;
+    float: left;
+}
+.feedAnswer{
+    width: 578px;
+    position: relative;
+    min-height: 200px;
+    padding:16px 51px 23px 51px;
+    background: white;
+    box-shadow: 0 0 3px #BCBCBC;
+    margin-top:10px;
+    -webkit-animation: fadeinSlideUp 1.5s; /* Safari, Chrome and Opera > 12.1 */
+    -moz-animation: fadeinSlideUp 1.5s; /* Firefox < 16 */
+    -ms-animation: fadeinSlideUp 1.5s; /* Internet Explorer */
+    -o-animation: fadeinSlideUp 1.5s; /* Opera < 12.1 */
+    animation: fadeinSlideUp 1.5s;
+
+}

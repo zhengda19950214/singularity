@@ -1,0 +1,37 @@
+.ICanTeachPageTwoWrapper {
+    min-height: 308px;
+    width: 270px;
+    align-content: center;
+    padding: 27px 26px 27px 26px
+}
+
+.ICanTeachPageOneWrapper {
+    height: 368px;
+    width: 270px;
+    align-content: center;
+    padding: 27px 26px 27px 26px
+}
+
+.ICanTeachPageThreeWrapper {
+    min-height: 100px;
+    width: 270px;
+    align-content: center;
+    padding: 27px 26px 27px 26px
+}
+
+.TutoringApplicationPageThreeWrapper {
+    min-height: 100px;
+    width: 372px;
+    align-content: center;
+    padding: 27px 26px 27px 26px
+}
+
+.ICanTeachPageOneWrapper ul {
+    padding-left: 20px;
+    margin-top: 5px;
+}
+
+.ICanTeachPageOneWrapper li {
+    font-family: Calibri, serif;
+    font-size: 15px;
+}
