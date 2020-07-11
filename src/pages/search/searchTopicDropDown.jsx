@@ -17,7 +17,7 @@ const SearchTopicDropDown = ({enteredTopic, chooseTopic, addNewTopic,allowCreate
         <div className="searchDropDown">
             <ul>
                 {searchTopic.map(topic => (
-                    <li id="searchResult" onClick={() => chooseTopic(topic.name,topic.id)}> {topic.name} </li>
+                    <li id="searchResult" onClick={() => chooseTopic(topic.name,topic.id)}> # {topic.name} </li>
                 ))}
                 {allowCreate&&<li id="addNewTopic" onClick={() => addNewTopic(enteredTopic)}><AddIcon/>
                 <span>Add new topic</span>

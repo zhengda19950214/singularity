@@ -9,12 +9,14 @@
 }
 .searchResultAndFilter{
     float: left;
-    width: 680px;
+    width: 671px;
 }
 .searchPageContent{
-    margin:auto;
     width: 875px;
+    height: 100%;
     position: relative;
+    z-index: 1;
+    margin: auto;
 }
 .filterWrapper{
     top:10px;
@@ -30,7 +32,6 @@
     animation: fadein 1s;
 }
 .searchResultWrapper{
-    width: 680px;
     min-height: 500px;
     position: relative;
 }

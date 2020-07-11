@@ -95,11 +95,10 @@
     position: relative;
     width: 200px;
     padding-left: 10px;
-    height: 25px;
+    height: 31px;
     border: 1px solid #797979;
 }
 .topicInputArea p{
-    color: rgba(255, 0, 5, 0.76);
     margin-left: 10px;
     font-size: 0.8em;
 }

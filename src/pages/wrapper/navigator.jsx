@@ -34,7 +34,6 @@ const Navigator = ({setPopUpWindow,selectedPage,me}) => {
                                 <li className={selectedPage==="Answer"?"activeLink":"unActiveLink"}><Link to='/Answer'>Answer</Link></li>
                                 <li className={selectedPage==="MySchool"?"activeLink":"unActiveLink"}><Link to='/MySchool'>My school</Link></li>
                                 <li className={selectedPage==="Tutoring"?"activeLink":"unActiveLink" }><Link to='/Tutoring'>Tutoring</Link></li>
-                                <li className={selectedPage==="Services"?"activeLink":"unActiveLink"}><Link style={{textDecoration:'line-through'}}>Services</Link></li>
 
                             </ol>
                         </div>

@@ -26,7 +26,7 @@
     margin-top:10px;
     padding-left: 20px;
     min-height: 100px;
-    width:195px;
+    width:184px;
     position: relative;
     padding-bottom: 20px;
     float: left;
@@ -63,7 +63,6 @@
 }
 .topicsWrapper img{
     position: relative;
-    left: 15%;
     width: 28px;
     height: 28px;
 
@@ -71,7 +70,6 @@
 }
 .topicsWrapper span{
     position: relative;
-    left: 18%;
     bottom:10px;
     font-family: Calibri;
     font-size: 16px;

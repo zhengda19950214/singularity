@@ -187,11 +187,11 @@ const QuestionCard = ({question, addAnswer, feedCard, followed,me}) => {
                 <Tooltip title="report"><FlagOutlinedIcon onClick={() => {
                     setReport(true);
                 }}/></Tooltip>
-                {report && <div>
+                {report &&
 
                     <ReportWindow user={user} reportContent={`We have received a report on this question /question/${question.id}`} closeWindow={() => {
                     setReport(false)
-                }}/></div>}
+                }}/>}
                 <div className="postButton">
                     {feedCard &&
                     <Link to={`/question/${question.id}`}><Button onClick={onPost}>

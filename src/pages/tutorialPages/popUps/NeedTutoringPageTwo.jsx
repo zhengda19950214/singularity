@@ -62,7 +62,7 @@ const NeedTutoringPageTwo = ({submitForm}) => {
                         <SearchTopicDropDown chooseTopic={chooseTopic} enteredTopic={currentTopicValue}
                                              addNewTopic={addNewTopic} allowCreate={true}/>
                     </div>}
-                    <div id="topicsArea" style={{marginTop:'5px',marginBottom:'20px'}}>
+                    <div id="topicsArea" style={{marginTop:'8px',marginBottom:'20px'}}>
                         {topics.map(topic => (
                             <div className="enteredTopic">
                                 #{topic.topicName}
