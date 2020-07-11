@@ -10,12 +10,12 @@
 .topicLeftContent{
     position: relative;
     left: 0;
-    width: 680px;
+    width: 671px;
     height: 80%;
     float: left;
 }
 .topicCard{
-    width: 578px;
+    width: 569px;
     min-height: 192px;
     padding:16px 51px 23px 51px;
     background: white;

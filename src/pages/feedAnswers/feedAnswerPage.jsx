@@ -58,6 +58,7 @@ const FeedAnswerPage = ({setSelectedPage, me}) => {
         if (wrapperRef.current.scrollHeight - wrapperRef.current.scrollTop - wrapperRef.current.clientHeight > 0) return;
         getMoreAnswers()
     };
+
     return (
         <div className="homePage" ref={wrapperRef} onScroll={handleScroll}>
             <div className="homePageContent" >
