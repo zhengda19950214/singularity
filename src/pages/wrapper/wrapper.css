@@ -7,7 +7,6 @@
 }
 .wrapper{
     background: #F8F8F8;
-    height: 100vh;
 }
 .contentWrapper{
     position: relative;
@@ -16,6 +15,8 @@
     height: 92%;
     margin:0;
     z-index: 1;
+    display: inline-block;
+    min-height: 100vh;
 }
 .navBar{
     background: white;

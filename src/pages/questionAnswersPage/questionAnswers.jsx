@@ -43,9 +43,21 @@ const QuestionAnswers = props => {
             }
             setAnswers(answers.concat(newAnswers));
         }});
+    const handleScroll = ({srcElement:{scrollingElement}}) => {
+        if(noMoreFetching){
+            return;
+        }
+
+        if (scrollingElement.scrollHeight - scrollingElement.scrollTop - scrollingElement.clientHeight > 0) return;
+        getMoreQuestions()
+    };
     useEffect(()=>{
         getQuestionQuery({variables: { id,orderBy:"RECENT" }});
     },[]);
+    useEffect(()=>{
+        window.addEventListener('scroll', handleScroll);
+        return () => window.removeEventListener("scroll", handleScroll);
+    },[answers]);
     const [selectedSortingMethod, setSelectedSortingMethod] = useState('Auto');
     const getMoreQuestions = () => {
         if(loadingMoreData){
@@ -54,13 +66,7 @@ const QuestionAnswers = props => {
         setLoadingMoreData(true);
         fetchMoreQuestionQuery({variables:{ id,orderBy:sortingMethodToTypeMap[selectedSortingMethod],lastOffset:answers.length }});
     };
-    const handleScroll = () => {
-        if(noMoreFetching){
-            return;
-        }
-        if (ref.current.scrollHeight - ref.current.scrollTop - ref.current.clientHeight !== 0) return;
-        getMoreQuestions()
-    };
+
     const sortingMethodToTypeMap = {
         'Auto':"RECENT",
         'Recent': "RECENT",

@@ -9,8 +9,9 @@ const Questions = ({setSelectedPage,setGreyCover,me}) => {
     const [questions,setQuestions] = useState([]);
     const [followedTopics, setFollowedTopics] = useState([]);
     const [followedQuestions, setFollowedQuestions] = useState([]);
-    const [loadingMoreData, setLoadingMoreData] = useState(false);
+    const [loadingMoreData, setLoadingMoreData] = useState(true);
     const [noMoreFeed, setNoMoreFeed] = useState(false);
+    const [noMoreFetching,setNoMoreFetching] = useState(false);
     const [nonFeedQuestionsIndex,setNonFeedQuestionsIndex] = useState(0);
     const wrapperRef = useRef(null);
     const [fetchQuestionsQuery, {data:fetchedQuestions}] = useLazyQuery(GET_QUESTIONS,{
@@ -20,6 +21,9 @@ const Questions = ({setSelectedPage,setGreyCover,me}) => {
             const {questions:questionFeed} = fetchedQuestions;
             setQuestions([...questions,...questionFeed]);
             setNonFeedQuestionsIndex(nonFeedQuestionsIndex+10);
+            if (questionFeed.length<10){
+                setNoMoreFetching(true);
+            }
         }
     });
 
@@ -44,11 +48,14 @@ const Questions = ({setSelectedPage,setGreyCover,me}) => {
     useEffect(()=>{
         getFeedQuestionsQuery({variables:{lastOffset:0}})
     },[]);
-
+    useEffect(()=>{
+        window.addEventListener('scroll', handleScroll);
+        return () => window.removeEventListener("scroll", handleScroll);
+    },[questions]);
     if (error) return <div/>;
     setSelectedPage("Answer");
     const getMoreQuestions = () => {
-        if(loadingMoreData){
+        if(loadingMoreData||noMoreFetching){
             return;
         }
         setLoadingMoreData(true);
@@ -59,9 +66,8 @@ const Questions = ({setSelectedPage,setGreyCover,me}) => {
             getFeedQuestionsQuery({variables:{lastOffset:questions.length}});
         }
     };
-    const handleScroll = () => {
-        if (wrapperRef.current.scrollHeight - wrapperRef.current.scrollTop - wrapperRef.current.clientHeight > 0) return;
-
+    const handleScroll = ({srcElement:{scrollingElement}}) => {
+        if (scrollingElement.scrollHeight - scrollingElement.scrollTop - scrollingElement.clientHeight > 0) return;
         getMoreQuestions()
     };
     return (
@@ -72,6 +78,10 @@ const Questions = ({setSelectedPage,setGreyCover,me}) => {
                         <div className="feedQuestion"><QuestionCard me={me} question={question} feedCard={true} setGreyCover={setGreyCover}
                                                                     followed={followedQuestions.some((q)=>{return q.id === question.id})}/></div>
                         ))}
+                    <div style={{position:'relative',height:'100px',paddingTop:'35px'}}>
+                        {loadingMoreData ? <img style={{marginLeft:'320px',height:'50px'}} src={require('../../resource/singularityLoading.gif')}/> :
+                            <span style={{position:'relative',marginLeft:'250px',fontSize:'18px'}} >-- No more questions --</span>}
+                    </div>
                 </div>
                 <div className="topics">
                     <div className="topicHeader">

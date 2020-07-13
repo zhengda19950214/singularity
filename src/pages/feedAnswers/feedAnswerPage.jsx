@@ -7,9 +7,10 @@ import {GET_ANSWERS, GET_FEED_ANSWERS} from '../graphQL/query'
 
 const FeedAnswerPage = ({setSelectedPage, me}) => {
     const [answers, setAnswers] = useState([]);
-    const [loadingMoreData, setLoadingMoreData] = useState(false);
+    const [loadingMoreData, setLoadingMoreData] = useState(true);
     const [noMoreFeed, setNoMoreFeed] = useState(false);
     const [nonFeedAnswersIndex,setNonFeedAnswersIndex] = useState(0);
+    const [noMoreFetching,setNoMoreFetching] = useState(false);
     const wrapperRef = useRef(null);
 
     const [fetchAnswersQuery, {data:fetchedQuestions}] = useLazyQuery(GET_ANSWERS,{
@@ -19,6 +20,9 @@ const FeedAnswerPage = ({setSelectedPage, me}) => {
             const {answers:answerFeed} = fetchedQuestions;
             setAnswers([...answers,...answerFeed]);
             setNonFeedAnswersIndex(nonFeedAnswersIndex+10);
+            if (answerFeed.length<10){
+                setNoMoreFetching(true);
+            }
         }
     });
     const [getFeedAnswerQuery, {error, data}] = useLazyQuery(GET_FEED_ANSWERS,{
@@ -39,11 +43,16 @@ const FeedAnswerPage = ({setSelectedPage, me}) => {
         getFeedAnswerQuery();
     },[])
     setSelectedPage("Home");
+    useEffect(()=>{
+        window.addEventListener('scroll', handleScroll);
+        return () => window.removeEventListener("scroll", handleScroll);
+    },[answers]);
     if (error) return <div/>;
 
+
     const getMoreAnswers = () => {
-        if(loadingMoreData){
-            return;
+        if(loadingMoreData||noMoreFetching){
+            return ;
         }
         setLoadingMoreData(true);
         if(noMoreFeed){
@@ -54,10 +63,11 @@ const FeedAnswerPage = ({setSelectedPage, me}) => {
         }
 
     };
-    const handleScroll = () => {
-        if (wrapperRef.current.scrollHeight - wrapperRef.current.scrollTop - wrapperRef.current.clientHeight > 0) return;
+    const handleScroll = ({srcElement:{scrollingElement}}) => {
+        if (scrollingElement.scrollHeight - scrollingElement.scrollTop - scrollingElement.clientHeight > 0) return;
         getMoreAnswers()
     };
+
 
     return (
         <div className="homePage" ref={wrapperRef} onScroll={handleScroll}>
@@ -71,6 +81,10 @@ const FeedAnswerPage = ({setSelectedPage, me}) => {
                                 </div>
                             )
                     })}
+                    <div style={{position:'relative',height:'100px',paddingTop:'35px'}}>
+                        {loadingMoreData ? <img style={{marginLeft:'320px',height:'50px'}} src={require('../../resource/singularityLoading.gif')}/> :
+                            <span style={{position:'relative',marginLeft:'250px',fontSize:'18px'}} >-- No more answers --</span>}
+                    </div>
                 </div>
                 <div className="topics">
                     <div className="topicHeader">

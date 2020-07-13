@@ -18,8 +18,8 @@ const SearchPage = props => {
         fetchPolicy:"network-only"
     });
     const [searchResult,setSearchResult] = useState([]);
-    const [loadingMoreData, setLoadingMoreData] = useState(false);
-    const [noMoreFetching] = useState(false);
+    const [loadingMoreData, setLoadingMoreData] = useState(true);
+    const [noMoreFetching,setNoMoreFetching] = useState(false);
     const [searchAnswerQuery,{data:searchData}] = useLazyQuery(SEARCH_ANSWER, {
         onCompleted: () => {
             const { search} = searchData;
@@ -32,17 +32,42 @@ const SearchPage = props => {
             const { search} = moreData;
             setLoadingMoreData(false);
             setSearchResult([...searchResult,...search]);
+            if (search.length<10){
+                setNoMoreFetching(true);
+            }
         },
         fetchPolicy:"network-only"});
+
     const [refetchQuestionQuery,{data:refetchedData}] = useLazyQuery(SEARCH_ANSWER, {
         onCompleted: () => {
             const { search} = refetchedData;
             setSearchResult(search);
         },
         fetchPolicy:"network-only"});
+    const searchMore = () => {
+        if(loadingMoreData){
+            return;
+        }
+        setLoadingMoreData(true);
+        fetchMoreAnswerQuery({variables: {searchString, searchedTopic:searchedTopic,lastOffset: searchResult.length,limit:5}})
+    };
+
+
+    const handleScroll = ({srcElement}) => {
+        if(noMoreFetching){
+            return;
+        }
+        const {scrollingElement} = srcElement;
+        if (scrollingElement.scrollHeight - scrollingElement.scrollTop - scrollingElement.clientHeight > 0) return;
+        searchMore()
+    };
     useEffect(() => {
         searchAnswerQuery({variables: {searchString, searchedTopic,lastOffset: 0,limit:5}})
     },[searchString]);
+    useEffect(()=>{
+        window.addEventListener('scroll', handleScroll);
+        return () => window.removeEventListener("scroll", handleScroll);
+    },[searchResult]);
 
     if (loading) return <div/>;
     if (error) return <div/>;
@@ -52,22 +77,9 @@ const SearchPage = props => {
         setSearchedTopic(topicIDs);
         refetchQuestionQuery({variables: {searchString, topicIDs:topicIDs,lastOffset: 0,limit:5}})
     };
-    const searchMore = () => {
-        if(loadingMoreData){
-            return;
-        }
-        setLoadingMoreData(true);
-        fetchMoreAnswerQuery({variables: {searchString, searchedTopic:searchedTopic,lastOffset: searchResult.length,limit:5}})
-    };
-    const handleScroll = () => {
-        if(noMoreFetching){
-            return;
-        }
 
-        if (wrapperRef.current.scrollHeight - wrapperRef.current.scrollTop - wrapperRef.current.clientHeight > 0) return;
-        searchMore()
-    };
     const filteredOutQuestions = searchResult.filter(question => question.answers.length > 0);
+
 
     return (
         <div className="searchPageWrapper" ref={wrapperRef} onScroll={handleScroll}>
@@ -90,6 +102,10 @@ const SearchPage = props => {
                                 )
                             }
                         })}
+                        <div style={{position:'relative',height:'100px',paddingTop:'35px'}}>
+                            {loadingMoreData ? <img style={{marginLeft:'320px',height:'50px'}} src={require('../../resource/singularityLoading.gif')}/> :
+                                <span style={{position:'relative',marginLeft:'253px',fontSize:'18px'}} >-- No more results --</span>}
+                        </div>
                     </div>
                 </div>
                 <div className="topics">

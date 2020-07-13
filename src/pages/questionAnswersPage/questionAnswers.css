@@ -1,6 +1,5 @@
 .questionAnswerWrapper{
-    overflow: auto;
-    height: 92vh;
+    min-height: 92vh;
     width: 100%;
     position: relative;
 }

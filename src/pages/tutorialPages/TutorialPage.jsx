@@ -20,6 +20,7 @@ const TutorialPage = ({setSelectedPage, setPopUpWindowType, setApplyTutorPost, m
     const wrapperRef = useRef(null);
     const [notifications, setNotifications] = useState(me.applicationNotifications);
     const [clearNotificationMutation] = useMutation(CLEAR_POST_NOTIFICATION);
+    const [noMoreFetching,setNoMoreFetching] = useState(false);
 
     const getNavItemBackground = (tagName) => {
         return selectedSubPage === tagName ? {background: '#3F4951', color: "white"} : {}
@@ -47,6 +48,9 @@ const TutorialPage = ({setSelectedPage, setPopUpWindowType, setApplyTutorPost, m
                 setPosts(searchTutorPost);
             } else {
                 setPosts([...posts, ...searchTutorPost]);
+            }
+            if (searchTutorPost.length<10){
+                setNoMoreFetching(true);
             }
         }
     });
@@ -96,7 +100,7 @@ const TutorialPage = ({setSelectedPage, setPopUpWindowType, setApplyTutorPost, m
 
     const getMoreTutorPosts = () => {
         setRenewPosts(false);
-        if (loadingMoreData) {
+        if (loadingMoreData||noMoreFetching) {
             return;
         }
         const topics = selectedTopic.length === 0 ? null : selectedTopic;
@@ -110,8 +114,8 @@ const TutorialPage = ({setSelectedPage, setPopUpWindowType, setApplyTutorPost, m
 
     };
 
-    const handleScroll = () => {
-        if (wrapperRef.current.scrollHeight - wrapperRef.current.scrollTop - wrapperRef.current.clientHeight > 0) return;
+    const handleScroll = ({srcElement:{scrollingElement}}) => {
+        if (scrollingElement.scrollHeight - scrollingElement.scrollTop - scrollingElement.clientHeight > 0) return;
         getMoreTutorPosts()
     };
 
@@ -126,6 +130,10 @@ const TutorialPage = ({setSelectedPage, setPopUpWindowType, setApplyTutorPost, m
     useEffect(() => {
         getFeedTutoringPosts();
     }, []);
+    useEffect(()=>{
+        window.addEventListener('scroll', handleScroll);
+        return () => window.removeEventListener("scroll", handleScroll);
+    },[posts]);
 
     if (error || searchTutorError) return <div/>;
     setSelectedPage("Tutoring");
@@ -165,7 +173,8 @@ const TutorialPage = ({setSelectedPage, setPopUpWindowType, setApplyTutorPost, m
                     </div>
                     {selectedSubPage === 'New' &&
                     <NewTutorialPostsPage posts={posts} setPopUpWindowType={applyTutoringPost} myId={me.id}
-                                          setPopUpCallBackFunction={setPopUpCallBackFunction}/>}
+                                          setPopUpCallBackFunction={setPopUpCallBackFunction}/>
+                    }
                     {selectedSubPage === 'My Posts' &&
                     <MyTutorPostsPage openSpecificUserWindow={openSpecificUserWindow}/>}
                     {selectedSubPage === 'My Tasks' && <MyTasksPage/>}

@@ -1,11 +1,9 @@
 .profilePageWrapper{
-    position: fixed;
     top: 65px;
     width: 100%;
     height: 92%;
     margin:0;
     align-content: center;
-    overflow: auto;
     -webkit-animation: fadein 1.0s; /* Safari, Chrome and Opera > 12.1 */
     -moz-animation: fadein 1.0s; /* Firefox < 16 */
     -ms-animation: fadein 1.0s; /* Internet Explorer */
