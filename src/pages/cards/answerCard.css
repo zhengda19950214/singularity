@@ -9,9 +9,11 @@
     height: 100%;
     position: relative;
 }
-.cardToolWrapper svg{
-
+.cardToolWrapper svg :hover{
+    opacity: 0.5;
+    transition: 0.3s ease all;
 }
+
 .cardToolWindow{
     position: absolute;
     left:30px;

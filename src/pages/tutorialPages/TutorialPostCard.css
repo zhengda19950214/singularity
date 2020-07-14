@@ -26,6 +26,10 @@
     margin-right: 10px;
 
 }
+.tutorialTopics span :hover{
+    opacity: 0.5;
+    transition: 0.3s ease all;
+}
 
 .tutorialTopics a {
     list-style-type: none;

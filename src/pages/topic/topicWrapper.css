@@ -20,7 +20,8 @@
     cursor: pointer;
 }
 .topicsWrapper a :hover{
-    text-decoration: underline;
+    opacity: 0.5;
+    transition: 0.3s ease all;
 }
 .topics{
     margin-top:10px;
@@ -73,6 +74,7 @@
     bottom:10px;
     font-family: Calibri;
     font-size: 16px;
+    margin-left: 4px;
 }
 .topicsWrapper a{
     text-decoration: none;
