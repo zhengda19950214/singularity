@@ -7,6 +7,9 @@
 }
 .wrapper{
     background: #F8F8F8;
+    min-width: 1280px;
+    min-height: 900px;
+
 }
 .contentWrapper{
     position: relative;
@@ -275,6 +278,7 @@ nav{
     left: 0;
     opacity:0.5;
     filter: alpha(opacity=50);
+    min-height: 980px;
 }
 .is-active{
     color: #09d3ac;
