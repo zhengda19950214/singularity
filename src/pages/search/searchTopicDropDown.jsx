@@ -12,7 +12,7 @@ const SearchTopicDropDown = ({enteredTopic, chooseTopic, addNewTopic,allowCreate
     if (loading) return <p>Loading...</p>;
     if (error) return <div/>;
     const {searchTopic} = data;
-    console.log(data);
+
     return (
         <div className="searchDropDown">
             <ul>

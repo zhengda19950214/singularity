@@ -111,7 +111,6 @@ const QuestionCard = ({question, addAnswer, feedCard, followed,me}) => {
         }
     };
 
-    console.log(toolWindowOpen)
 
     return (
         <div className="card">

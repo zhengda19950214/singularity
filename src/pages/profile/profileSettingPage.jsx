@@ -1,7 +1,7 @@
 import React, {useState} from "react";
 import './profileSetting.css'
 import SettingField from "./settingField";
-import {useMutation} from "@apollo/react-hooks";
+import {useMutation, useQuery} from "@apollo/react-hooks";
 import {UPDATE_SELF} from "../graphQL/userMutation";
 import NameSettingField from "./nameSettingField";
 import AccountCircleIcon from '@material-ui/icons/AccountCircle';
@@ -17,6 +17,7 @@ const ProfileSettingPage = ({user, refetch}) => {
         phone: defaultPhoneNumber,
         email,
     } = user;
+
     const [firstName, setFirstName] = useState(defaultFirstName);
     const [lastName, setLastName] = useState(defaultLastName);
     const [major, updateMajor] = useState(defaultMajor);
@@ -98,6 +99,7 @@ const ProfileSettingPage = ({user, refetch}) => {
         setFirstName(defaultFirstName);
         setLastName(defaultLastName);
     };
+
     return (
         <div className="profileHomePageWrapper">
             <div className="ProfileContentList">
@@ -113,7 +115,8 @@ const ProfileSettingPage = ({user, refetch}) => {
                 {settingFields.map(field => (
                     <SettingField field={field} key={field.name} updateSelf={updateSelf}/>
                 ))}
-                <TutorCardSettingField user={user} refetch={refetch}/>
+                {user.tutorCard !== null &&
+                <TutorCardSettingField user={user} refetch={refetch}/>}
             </div>
         </div>
     )
