@@ -13,12 +13,12 @@ const TopicWrapper = ({topics,editMode=false,chooseTopic,removeTopic}) => {
                     const thumbnail = topic.thumbnail||require('../../resource/default_topic_image.png');
                     return (<li key={topic.id}>
                         <div className="topicNameAndThumbnail"><img alt="topicPicture" height="20px" width="20px" src={thumbnail}/>
-                                <Link to={`/Topic/${topic.id}`}><span> #{topic.name.length>17?topic.name.substring(0,14)+"...":topic.name}</span></Link>
+                                <Link to={`/Topic/${topic.id}`}><span> #{topic.name.length>14?topic.name.substring(0,11)+"...":topic.name}</span></Link>
                         </div> {editMode&&<ClearIcon onClick={()=>removeTopic(topic.id)}/>} </li>)
                 })
             }
             {editMode &&<div className="topicWrapperEnterTopic"><li>
-                <input value={enteredTopic} onChange={(e)=>setEnteredTopic(e.target.value)} placeholder="Press Enter to add"/></li>
+                <input value={enteredTopic} onChange={(e)=>setEnteredTopic(e.target.value)} placeholder="Add more topics"/></li>
                 {enteredTopic.length>0 &&
                 <div className="topicWrapperSearchDropdown">
                     <SearchTopicDropDown enteredTopic={enteredTopic}

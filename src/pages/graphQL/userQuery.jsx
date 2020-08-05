@@ -23,7 +23,7 @@ export const ME = gql`
             followedQuestions{
                 id
             }
-            followedTopics{
+            followedTopics(limit:20){
                 id
                 name
                 thumbnail
@@ -129,7 +129,7 @@ export const USER_FOLLOWED_TOPICS = gql`
     {
         me{
             id
-            followedTopics{
+            followedTopics(limit:100){
                 id
                 name
                 thumbnail

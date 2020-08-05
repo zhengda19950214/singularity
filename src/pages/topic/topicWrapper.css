@@ -60,14 +60,13 @@
     width: 131px;
     height: 25px;
     position: relative;
-    left:30px;
 }
 .topicsWrapper img{
     position: relative;
     width: 28px;
     height: 28px;
 
-    border: 1px #797979 dashed;
+    border: 1px lightgrey dashed;
 }
 .topicsWrapper span{
     position: relative;

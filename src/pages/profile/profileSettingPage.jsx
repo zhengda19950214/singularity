@@ -113,7 +113,8 @@ const ProfileSettingPage = ({user, refetch}) => {
                 {settingFields.map(field => (
                     <SettingField field={field} key={field.name} updateSelf={updateSelf}/>
                 ))}
-                <TutorCardSettingField user={user} refetch={refetch}/>
+                {user.tutorCard !== null &&
+                <TutorCardSettingField user={user} refetch={refetch}/>}
             </div>
         </div>
     )

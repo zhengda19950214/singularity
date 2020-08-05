@@ -4,7 +4,7 @@ import ICanTeachPageTwo from "./ICanTeachPageTwo";
 import './ICanTeachPopUpPage.css'
 
 const ICanTeachPopUpPage = ({tutorCard}) => {
-    const [pageNumber, setPageNumber] = useState(tutorCard ? 3 : 1);
+    const [pageNumber, setPageNumber] = useState(tutorCard ? 4 : 1);
     const [windowTopPosition, setWindowTopPosition] = useState('100px');
     return (
         <div className="TutoringPopUpWrapper" style={{width: "345px", top: windowTopPosition}}>
@@ -39,6 +39,13 @@ const ICanTeachPopUpPage = ({tutorCard}) => {
                 <div className="ICanTeachPageThreeWrapper">
                     <h1>You are all set!</h1>
                     <p>Now you can start your tutoring, good luck!</p>
+                </div>
+            }
+            {
+                pageNumber === 4 &&
+                <div className="ICanTeachPageThreeWrapper">
+                    <h1>You already have a Tutor Card!</h1>
+                    <p>You can always change your Tutor Card setting under your profile settings!</p>
                 </div>
             }
         </div>
