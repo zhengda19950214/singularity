@@ -23,6 +23,7 @@ const ProfilePage = props => {
     const selectTopic = (topic) => {
         setSelectedTopic(topic);
     };
+
     return (
         <div className="profilePageWrapper">
             <div className="profileWrapper">
