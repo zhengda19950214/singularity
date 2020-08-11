@@ -65,7 +65,7 @@ const ArticleCard = ({article,refetch,bookmarked}) => {
                 }
             </div>
             <div className="articleContent">
-                <HTMLEllipsis unsafeHTML={article.content}/>
+                <HTMLEllipsis unsafeHTML={article.content} maxLine = '500'/>
             </div>
             <div className="articleTopicWrapper">
             </div>
