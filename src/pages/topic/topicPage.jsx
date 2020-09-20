@@ -82,23 +82,26 @@ const TopicPage = props => {
                     <div className="topicHeader">
                         <p>Parent topics</p>
                     </div>
-                    {parent.length>0?
+                    {parent.length==0 &&
+                        <span style={{fontSize:'15px', color:'grey'}}>this topic has no parent topic</span>
+                    }
+
                     <TopicWrapper editMode={editMode}
                                   chooseTopic={addParent}
                                   topics={parent}
-                                  removeTopic={(parentID)=>removeTopicRelationship(parentID,id)}/>:
-                    <span style={{fontSize:'15px', color:'grey'}}>this topic has no parent topic</span>}
+                                  removeTopic={(parentID)=>removeTopicRelationship(parentID,id)}/>
+
                 </div>
                 <div className="topics">
                     <div className="topicHeader">
                         <p>Child topics</p>
                     </div>
-                    {children.length>0?
+                    {children.length == 0 &&  <span style={{fontSize:'15px', color:'grey'}}>this topic has no child topic</span>}
                     <TopicWrapper editMode={editMode}
                                   chooseTopic={addChild}
                                   topics={children}
-                                  removeTopic={(childID)=>removeTopicRelationship(id,childID)}/>:
-                        <span style={{fontSize:'15px', color:'grey'}}>this topic has no child topic</span>}
+                                  removeTopic={(childID)=>removeTopicRelationship(id,childID)}/>
+
                 </div>
             </div>
         </div>

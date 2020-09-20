@@ -97,7 +97,7 @@ export const GET_FEED_ANSWERS = gql` query ($recentLastOffset:Int,$ratingLastOff
 
     me{
         id
-        followedTopics{
+        followedTopics(limit:20){
             id
             name
             thumbnail

@@ -70,6 +70,7 @@ const Questions = ({setSelectedPage,setGreyCover,me}) => {
         if (scrollingElement.scrollHeight - scrollingElement.scrollTop - scrollingElement.clientHeight > 0) return;
         getMoreQuestions()
     };
+
     return (
         <div className="homePage"  ref={wrapperRef} onScroll={handleScroll}>
             <div className="homePageContent">

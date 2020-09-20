@@ -131,8 +131,8 @@ const TopicCard = ({topic, editMode, setEditMode, topicFollowed}) => {
                 {(!editMode && followed) && <Button onClick={unFollowTopic}><p>Followed</p></Button>}
                 {editMode &&
                 <div className="lastUpdateInformation">
-                    <p>Last updated by </p>
-                    <p style={{color: "#169BD5", textAlign: "center"}}>Chris Chen </p>
+
+
                 </div>}
             </div>
 
