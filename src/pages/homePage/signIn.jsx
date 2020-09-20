@@ -61,7 +61,7 @@ const SignInPage = ({signUp, setSession,needConfirm,setForgotPassword}) => {
                             <div className="signInHelpTool">
                                 <input type="checkbox" className="checkBox" value={rememberMe} onChange={()=>{setRememberMe(!rememberMe)}}/>
                                 <span id="rememberMe">Remember me</span>
-                                <span style={{left:'310px'}} id="forgetPassword" onClick={()=>{
+                                <span id="forgetPassword" onClick={()=>{
                                     if(values.userEmail === ''){
                                         alert("please enter an valid user email");
                                     }
@@ -74,7 +74,7 @@ const SignInPage = ({signUp, setSession,needConfirm,setForgotPassword}) => {
                         <div className="signInActions">
                             <Button type="submit" style={{background: "#E36100"}}><span>Login</span></Button>
                             <Button onClick={signUp}
-                                    style={{background: "#FF9240", left:"83px"}}><span>Signup</span></Button>
+                                    style={{background: "#FF9240", float:'right'}}><span>Signup</span></Button>
                         </div>
 
                     </form>
