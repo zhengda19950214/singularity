@@ -38,6 +38,9 @@ const Navigator = ({setPopUpWindow,selectedPage,me}) => {
                             </ol>
                         </div>
                         <SearchInput/>
+                        <Button onClick={()=>setPopUpWindow("schoolTutorial")}>1</Button>
+                        <Button onClick={()=>setPopUpWindow("tutoringTutorialPopup")}>2</Button>
+
                         <div className="askQuestionWrapper">
                             <Button id="askQuestionButton" onClick={()=>setPopUpWindow("postQuestion")}>
                                 <AddBoxOutlined/><span>Question</span>

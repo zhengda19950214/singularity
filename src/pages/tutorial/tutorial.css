@@ -1,0 +1,66 @@
+
+.tutorialContainer {
+    position:absolute;
+    margin:auto;
+    top:0;
+    bottom:0;
+    left: 0;
+    right: 0;
+    width: 650px;
+    height: 530px;
+    border: 2px solid #ff9240;
+    border-radius: 6px;
+    z-index: 100;
+    background-color: white;
+    box-sizing: border-box;
+    padding: 40px 75px 40px 75px;
+    display: inline;
+}
+
+.tutorialContainer h1{
+    font-family: Calibri, serif;
+    font-size: 2em;
+}
+.mySchoolContent img{
+    position: relative;
+    box-shadow: 0px 0px 5px #ccc;
+    -webkit-box-shadow: 0px 0px 5px #ccc;
+    -moz-box-shadow: 0px 0px 5px #ccc;
+    -webkit-animation: fadein 1s; /* Safari, Chrome and Opera > 12.1 */
+    -moz-animation: fadein 1s; /* Firefox < 16 */
+    -ms-animation: fadein 1s; /* Internet Explorer */
+    -o-animation: fadein 1s; /* Opera < 12.1 */
+    animation: fadein 1s;
+    animation-fill-mode:both;
+}
+
+.mySchoolContent {
+    position: relative;
+    box-sizing: border-box;
+    display: inline;
+    margin-bottom: 50px;
+    width: 100%;
+    height: 110px;
+}
+
+.mySchoolWordContent {
+    position: relative;
+    width: 350px;
+    display: inline-block;
+    padding: 20px 5px 20px 5px;
+    -webkit-animation: fadein 1s; /* Safari, Chrome and Opera > 12.1 */
+    -moz-animation: fadein 1s; /* Firefox < 16 */
+    -ms-animation: fadein 1s; /* Internet Explorer */
+    -o-animation: fadein 1s; /* Opera < 12.1 */
+    animation: fadein 1s;
+    animation-fill-mode:both;
+}
+
+
+
+
+
+.mySchoolWordContent span{
+    font-family: Calibri, serif;
+    font-size: 1.1em;
+}

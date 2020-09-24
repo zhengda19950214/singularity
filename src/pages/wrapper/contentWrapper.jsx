@@ -19,6 +19,8 @@ import TutorialPage from "../tutorialPages/TutorialPage";
 import NeedTutoringPopUpPage from "../tutorialPages/popUps/NeedTutoringPopUpPage";
 import ICanTeachPopUpPage from "../tutorialPages/popUps/ICanTeachPopUpPage";
 import TutoringApplicationPopUp from "../tutorialPages/popUps/TutoringApplicationPopUp";
+import MySchoolTutorial from "../tutorial/mySchoolTutorial";
+import TutoringTutorial from "../tutorial/tutoringTutorial";
 
 const ContentWrapper = () => {
     const [selectedPage, setSelectedPage] = useState("Home");
@@ -96,6 +98,14 @@ const ContentWrapper = () => {
                 {
                     (popUpWindow === "applyTutoringPost") &&
                     <TutoringApplicationPopUp setPopUpWindow={setPopUpWindow} tutorPost={applyTutorPost} tutorCard={me.tutorCard} popUpCallBackFunction={popUpCallBackFunction}/>
+                }
+                {
+                    (popUpWindow === "schoolTutorial") &&
+                    <MySchoolTutorial/>
+                }
+                {
+                    (popUpWindow === "tutoringTutorialPopup") &&
+                    <TutoringTutorial/>
                 }
             </div>
             }
