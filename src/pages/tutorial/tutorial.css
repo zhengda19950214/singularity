@@ -7,7 +7,7 @@
     left: 0;
     right: 0;
     width: 650px;
-    height: 530px;
+    height: 580px;
     border: 2px solid #ff9240;
     border-radius: 6px;
     z-index: 100;
@@ -45,7 +45,7 @@
 
 .mySchoolWordContent {
     position: relative;
-    width: 350px;
+    width: 260px;
     display: inline-block;
     padding: 20px 5px 20px 5px;
     -webkit-animation: fadein 1s; /* Safari, Chrome and Opera > 12.1 */

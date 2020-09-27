@@ -129,7 +129,7 @@ const ContentWrapper = () => {
                     />
                 </Route>
                 <Route path="/MySchool">
-                    <MySchoolPage setSelectedPage={setSelectedPage} bookMarkedAnswers={me.bookmarkedAnswers}/>
+                    <MySchoolPage setSelectedPage={setSelectedPage} bookMarkedAnswers={me.bookmarkedAnswers} setPopUpWindowType={setPopUpWindowType}/>
                 </Route>
                 <Route path="/answer">
                     <Questions setGreyCover={setGreyCover} followedQuestions={me.followedQuestions} setSelectedPage={setSelectedPage} me={me}/>

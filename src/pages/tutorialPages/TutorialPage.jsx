@@ -129,6 +129,11 @@ const TutorialPage = ({setSelectedPage, setPopUpWindowType, setApplyTutorPost, m
 
     useEffect(() => {
         getFeedTutoringPosts();
+        const doNotShowTutorialPopUp = localStorage.getItem("doNotShowTutoringPageTutorial")
+        if(!doNotShowTutorialPopUp){
+            setPopUpWindowType('tutoringTutorialPopup');
+            localStorage.setItem("doNotShowTutoringPageTutorial","yes");
+        }
     }, []);
     useEffect(()=>{
         window.addEventListener('scroll', handleScroll);

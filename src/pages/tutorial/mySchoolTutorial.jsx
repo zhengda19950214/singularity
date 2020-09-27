@@ -9,7 +9,7 @@ const mySchoolTutorial = () =>{
             <div className='mySchoolContent'>
                 <div style={{animationDelay:'0.5s'}} className='mySchoolWordContent'>
                     <span>
-                        In my school page, posts are only available for you and your schoolmates. Sometimes, others can never understand.
+                        In the My school page, posts are only available for you and your schoolmates. Sometimes,the questions you want to ask are only relevant to your campus.
                     </span>
 
                 </div>
@@ -19,7 +19,7 @@ const mySchoolTutorial = () =>{
                 <img style={{animationDelay:'2s'}}  src={require('../../resource/mySchoolTutorial2.png')}/>
                 <div  style={{animationDelay:'2.5s',float:'right'}} className='mySchoolWordContent'>
                     <span>
-                        You can post my-school posts in any post form. Just remember to check the box.
+                        You can choose to post any of your questions and articles to My school by simply checking a box. 
                     </span>
 
                 </div>
@@ -28,7 +28,7 @@ const mySchoolTutorial = () =>{
             <div className='mySchoolContent'>
                 <div style={{animationDelay:'3.5s'}} className='mySchoolWordContent'>
                     <span>
-                        In the future, we will introduce many more services just for you. And your schoolmates.
+                        In the future, we will introduce many more services for you and your schoolmates to get the full college experience.
                     </span>
 
                 </div>

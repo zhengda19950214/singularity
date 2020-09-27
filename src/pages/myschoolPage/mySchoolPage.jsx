@@ -6,7 +6,8 @@ import SchoolCard from "./schoolCard";
 import './mySchoolPage.css'
 import {GET_MORE_MY_SCHOOL, GET_MY_SCHOOL} from "../graphQL/questionQuery";
 
-const MySchoolPage = ({setSelectedPage,bookMarkedAnswers}) => {
+const MySchoolPage = ({setSelectedPage,bookMarkedAnswers,setPopUpWindowType}) => {
+
     const [ questions,setQuestions] = useState([]);
     const [ getMySchool, setGetMySchool] = useState({});
     const [ followedTopics, setTopics] = useState([]);
@@ -33,6 +34,12 @@ const MySchoolPage = ({setSelectedPage,bookMarkedAnswers}) => {
     });
     useEffect(()=>{
         fetchingMySchoolQuery({variables:{limit:5,lastOffset:0}})
+        const doNotShowTutorialPopUp = localStorage.getItem("doNotShowMySchoolPageTutorial")
+        if(!doNotShowTutorialPopUp){
+            setPopUpWindowType('schoolTutorial');
+            localStorage.setItem("doNotShowMySchoolPageTutorial","yes");
+        }
+
     },[]);
     setSelectedPage("MySchool");
     useEffect(()=>{
