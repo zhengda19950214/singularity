@@ -1,4 +1,4 @@
-import React, {useState} from 'react'
+import React, {useEffect, useState} from 'react'
 import './registerPage.css'
 import './signIn.css';
 import './homePage.css'
@@ -18,6 +18,7 @@ const HomePage = ({setSession}) => {
     const [forgotPassword,setForgotPassword] = useState(false);
     const [userEmail, setCurrentUserEmail] = useState();
     const [userPassword, setUserPassword] = useState();
+
     let imgUrl = require('../../resource/homepage.jpg');
 
     const sendForgotPasswordConfirmation = (userEmail) =>{
@@ -42,6 +43,7 @@ const HomePage = ({setSession}) => {
 
             );
     };
+
 
 
     if(forgotPassword) {

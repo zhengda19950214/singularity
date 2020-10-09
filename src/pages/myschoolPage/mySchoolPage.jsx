@@ -39,8 +39,8 @@ const MySchoolPage = ({setSelectedPage,bookMarkedAnswers,setPopUpWindowType}) =>
             setPopUpWindowType('schoolTutorial');
             localStorage.setItem("doNotShowMySchoolPageTutorial","yes");
         }
-
     },[]);
+
     setSelectedPage("MySchool");
     useEffect(()=>{
         window.addEventListener('scroll', handleScroll);

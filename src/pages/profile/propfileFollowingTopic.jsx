@@ -42,6 +42,7 @@ const ProfileFollowingTopic = () => {
             }
         })
     };
+    console.log(topics);
 
     return (
         <div className="profileRightPartWrapper">
@@ -52,7 +53,7 @@ const ProfileFollowingTopic = () => {
             <div className="profileRightPartContent">
                 {topics.map(topic => (
                     <div key={topic.id} className="followingContent">
-                        <img height="40px" width="50px" src={topic.thumbnail || require('../../resource/topic.svg')}/>
+                        <img height="40px" width="50px" src={topic.thumbnail || require('../../resource/default_topic_image.png')}/>
                         <div className="followingTopicName">
                             <Link to={"/topic/" + topic.id}><h1>#{topic.name}</h1></Link>
                         </div>

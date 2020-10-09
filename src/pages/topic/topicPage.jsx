@@ -17,7 +17,6 @@ const TopicPage = props => {
     const [removeTopicRelationshipMutation] = useMutation(REMOVE_TOPIC_RELATIONSHIP);
     const [editMode,setEditMode] = useState(false);
 
-
     if(loading) return <div/>;
     if(error) return <div/>;
 

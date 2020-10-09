@@ -21,6 +21,7 @@ import ICanTeachPopUpPage from "../tutorialPages/popUps/ICanTeachPopUpPage";
 import TutoringApplicationPopUp from "../tutorialPages/popUps/TutoringApplicationPopUp";
 import MySchoolTutorial from "../tutorial/mySchoolTutorial";
 import TutoringTutorial from "../tutorial/tutoringTutorial";
+import TopicSetUp from "../tutorial/topicSetUp";
 
 const ContentWrapper = () => {
     const [selectedPage, setSelectedPage] = useState("Home");
@@ -107,6 +108,11 @@ const ContentWrapper = () => {
                     (popUpWindow === "tutoringTutorialPopup") &&
                     <TutoringTutorial/>
                 }
+                {
+                    (popUpWindow === "topicSetUpPopup") &&
+                    <TopicSetUp/>
+
+                }
             </div>
             }
 
@@ -153,7 +159,7 @@ const ContentWrapper = () => {
                   path="/Profile/:userId"
                   render={(props) => <ProfilePage {...props} me={me} refetchMe={refetch} createOverviewMessage={createOverviewMessage} openMessageMenu={openMessageMenu}/>} />
                 <Route exact path="/Home">
-                    <FeedAnswerPage bookMarkedAnswers={me.bookmarkedAnswers} setSelectedPage={setSelectedPage} me={me}/>
+                    <FeedAnswerPage bookMarkedAnswers={me.bookmarkedAnswers} setSelectedPage={setSelectedPage} me={me} setPopUpWindowType={setPopUpWindowType}/>
                 </Route>
                 <Route exact path="/ChangePassword">
                     <ChangePasswordPage  setSelectedPage={setSelectedPage}/>

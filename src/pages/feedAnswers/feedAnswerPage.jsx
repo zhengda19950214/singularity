@@ -5,7 +5,7 @@ import TopicWrapper from "../topic/topicWrapper";
 import {useLazyQuery} from '@apollo/react-hooks';
 import {GET_ANSWERS, GET_FEED_ANSWERS} from '../graphQL/query'
 
-const FeedAnswerPage = ({setSelectedPage, me}) => {
+const FeedAnswerPage = ({setSelectedPage, me, setPopUpWindowType}) => {
     const [answers, setAnswers] = useState([]);
     const [loadingMoreData, setLoadingMoreData] = useState(true);
     const [noMoreFeed, setNoMoreFeed] = useState(false);
@@ -39,9 +39,16 @@ const FeedAnswerPage = ({setSelectedPage, me}) => {
         }
     });
 
-    useEffect(()=>{
+
+    useEffect(() => {
         getFeedAnswerQuery();
-    },[])
+        const doNotShowTopicSetUpPopup = localStorage.getItem("doNotShowTopicSetUp")
+        if(!doNotShowTopicSetUpPopup){
+            setPopUpWindowType('topicSetUpPopup');
+            localStorage.setItem("doNotShowTopicSetUp","yes");
+        }
+    }, []);
+
     setSelectedPage("Home");
     useEffect(()=>{
         window.addEventListener('scroll', handleScroll);
